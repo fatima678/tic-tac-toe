@@ -22,10 +22,11 @@
 	</div>
 
 	<script>
-		player=1
+		player=1;
 		function runfn(element){
 			if(winner=check()){
-				alert('winner fond');
+				alert(winner+' has won the game');
+				location.reload();
 			}
 			if(player%2!=0){
 				element.innerHTML="O";
@@ -50,7 +51,29 @@
 			if(d1==d2 && d2==d3 && d1!="" && d2!="" && d3!=""){
 				return d1;
 			}
-		}
+			else if(d4==d5 && d5==d6 && d4!="" && d5!="" && d6!=""){
+				return d4;
+			}
+			else if(d7==d8 && d8==d9 && d7!="" && d8!="" && d9!=""){
+				return d7;
+			}
+			else if(d1==d4 && d4==d7 && d1!="" && d4!="" && d7!=""){
+				return d1;
+			}
+			else if(d2==d5 && d5==d8 && d2!="" && d5!="" && d8!=""){
+				return d2;
+			}
+			else if(d3==d6 && d6==d9 && d3!="" && d6!="" && d9!=""){
+				return d3;
+			}
+			else if(d1==d5 && d5==d9 && d1!="" && d5!="" && d9!=""){
+				return d1;
+			}
+			else if(d3==d5 && d5==d7 && d3!="" && d5!="" && d7!=""){
+				return d3;
+
+			}
+			}
 	</script>
 
 </body>
